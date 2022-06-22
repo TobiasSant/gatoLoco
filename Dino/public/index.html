@@ -3,7 +3,7 @@
 <head>
     <title>Juego</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616438.png" type="image.png">
+    <link rel="icon" href="css/img/cactus1.png" type="image.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -178,11 +178,6 @@ function DecidirCrearObstaculos() {
     tiempoHastaObstaculo -= deltaTime;
     if(tiempoHastaObstaculo <= 0) {
         CrearObstaculo();
-        /*obstaculo = Math.random();
-        if(obstaculo >= 0.5 || obstaculo < tiempoObstaculoMin){
-            tiempoObstaculoMin = obstaculo;
-        }
-        else{ tiempoObstaculoMin=0.7;}*/
     }
 }
 
@@ -249,12 +244,9 @@ function GanarPuntos() {
     if(score>2){
         gameVel = score*(0.5+deltaTime);
     }
-    /*if(score>20){
-        tiempoObstaculoMin = 0.9*(20/score);
-    }*/
     if(score >= 0) contenedor.classList.add("mediodia")
     if(score >= 10) contenedor.classList.add("tarde");
-    if(score >= 25) contenedor.classList.add("noche");
+    if(score >= 30) contenedor.classList.add("noche");
     suelo.style.animationDuration = (3/gameVel)+"s";
 }
 
